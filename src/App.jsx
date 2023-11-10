@@ -3,8 +3,10 @@ import Bar from './Components/Bar';
 import Nav from './Components/Nav'
 import react, { useState } from 'react'
 import Box from './Components/Box'
-import Options from './Components/Options';
 import Filters from './Components/Filters';
+import Options from './Components/Options';
+
+
 import { Card, Typography } from "@material-tailwind/react";
 
 
@@ -20,7 +22,7 @@ const App = () =>
     <Bar/>
     <Nav/>
     <Box/>
-    <Options/>
+     <Options/>
     <Filters/>
     </div>
   );

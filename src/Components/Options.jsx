@@ -1,6 +1,10 @@
 import React from 'react'
+import { useState } from 'react'
+
 
 const Options = () => {
+    const[search,setSearch]=useState()
+
   return (
     <div>
         <div>
@@ -68,12 +72,17 @@ const Options = () => {
             <option value="">A</option>
             <option value="">B</option>
             <option value="t">C</option>
+
         </select>
     </ul>
-</div>
 <button className='bg-teal-500 ml-20 mt-4 rounded-full 
         h-8 w-16 text-white'>Reset</button>
-    </div>
+
+        </div>
+       
+        </div>
+        
+        
   )
 }
 
