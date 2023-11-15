@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { data } from '../data';
+import Options from './Options';
 
 const Filters = () => {
   const [search, setSearch] = useState('');
@@ -48,19 +49,19 @@ const Filters = () => {
             type="search"
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search here"
-            className="w-64 bg-teal-500 rounded-full h-12 w-16 rounded-full ml-4 m-6 pl-4"
+            className="w-96 p-4 rounded-full ml-44"
           />
         </form>
       </div>
       <table className="min-w-full bg-white border border-gray-300">
         <thead>
-          <tr className="bg-gray-100">
-            <th className="py-2 px-4">ID</th>
-            <th className="py-2 px-4">Name</th>
-            <th className="py-2 px-4">Email</th>
-            <th className="py-2 px-4">Phone</th>
-            <th className="py-2 px-4">Rno</th>
-          </tr>
+            <tr className="bg-gray-100">
+                <th className="py-2 px-4">ID</th>
+                <th className="py-2 px-4">Name</th>
+                <th className="py-2 px-4">Email</th>
+                <th className="py-2 px-4">Phone</th>
+                <th className="py-2 px-4">Rno</th>
+            </tr>
         </thead>
         <tbody>
           {currentRecords.map((val) => (
@@ -85,7 +86,8 @@ const Filters = () => {
               Prev
             </button>
           </li>
-          {pageNumbers.map((number) => (
+          {
+          pageNumbers.map((number) => (
             <li key={number} className="mr-2">
               <button
                 className={`bg-teal-500 text-white px-4 py-2 rounded ${

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Filters from './Filters'
 
 
 const Options = () => {
@@ -48,12 +49,13 @@ const Options = () => {
         </select>
     </ul>
     
-    <ul className='pl-20 pt-36 '>
-        Duration Wise: <select className="w-28" id="Mymudra">
+    <ul className='pl-20 pt-36 ' >
+
+        Duration Wise: <select  className="w-28" id="Mymudra">
             <option value=""></option>
-            <option value="">A</option>
-            <option value="">B</option>
-            <option value="t">C</option>
+            <option value="">Nortan</option>
+            <option value="">Mudit</option>
+            <option value="t">Lacy</option>
         </select>
     </ul>
     
