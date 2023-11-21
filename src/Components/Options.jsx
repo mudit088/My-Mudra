@@ -1,10 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
-import Filters from './Filters'
 
 
-const Options = () => {
-    const[search,setSearch]=useState()
+const Options = ({handleFiltersChange}) => {
+   ;
+    const [selectedGender, setSelectedGender] = useState('');
+
+   
+    const handleGenderChange = (e) => {
+        const gender = e.target.value;
+        setSelectedGender(gender);
+        handleFiltersChange({  gender });
+      };
 
   return (
     <div>
@@ -23,7 +30,7 @@ const Options = () => {
     </div>
     <div className='' style={{ display: 'flex', flexDirection: 'row', }}>
     <ul className='pt-36 pl-20'>
-        Load Source: <select className="w-28" id="Mymudra">
+        Name: <select className="w-28" id="Mymudra">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
@@ -32,7 +39,7 @@ const Options = () => {
     </ul>
 
     <ul className='pl-20 pt-36 border-black'>
-        Loan Type: <select className="w-28 border-black" id="Mymudra">
+        Car: <select className="w-28 border-black" id="Mymudra">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
@@ -41,30 +48,29 @@ const Options = () => {
     </ul>
     
     <ul className='pl-20 pt-36'>
-        Status wise: <select className="w-28" id="Mymudra">
+        Company: <select className="w-28"   >
+            <option value=""></option>
+            <option value="Latz">Latz</option>
+            <option value="Devpulse">Devpulse</option>
+            <option value="Zoovu">Zoovu</option>
+        </select>
+    </ul>
+    
+    <ul className='pl-20 pt-36 '>
+        Email: <select className="w-28" id="Mymudra">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
             <option value="t">C</option>
-        </select>
-    </ul>
-    
-    <ul className='pl-20 pt-36 ' >
-
-        Duration Wise: <select  className="w-28" id="Mymudra">
-            <option value=""></option>
-            <option value="">Nortan</option>
-            <option value="">Mudit</option>
-            <option value="t">Lacy</option>
         </select>
     </ul>
     
     <ul className='pl-20 pt-36'>
-        Team Lead Wise: <select className="w-32" id="Mymudra">
+        Gender: <select className="w-32" value={selectedGender} onChange={handleGenderChange}>
             <option value=""></option>
-            <option value="">A</option>
-            <option value="">B</option>
-            <option value="t">C</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+           
         </select>
     </ul>
     
