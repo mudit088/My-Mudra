@@ -61,7 +61,7 @@ const Filters = ({info}) => {
         </tbody>
       </table>
       <nav className="mt-4">
-        <ul className="flex list-none">
+        <ul className="flex list-none justify-center">
           <li className="mr-2">
             <button
               className="bg-teal-500 text-white px-4 py-2 rounded disabled:opacity-50"

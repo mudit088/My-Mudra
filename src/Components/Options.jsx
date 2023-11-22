@@ -3,14 +3,18 @@ import { useState } from 'react'
 
 
 const Options = ({handleFiltersChange}) => {
-   ;
+    const [selectedCompany, setSelectedCompany] = useState('');
     const [selectedGender, setSelectedGender] = useState('');
 
-   
+    const handleCompanyChange = (e) => {
+        const company = e.target.value;
+        setSelectedCompany(company);
+        handleFiltersChange({ company, gender: selectedGender});
+    };
     const handleGenderChange = (e) => {
         const gender = e.target.value;
         setSelectedGender(gender);
-        handleFiltersChange({  gender });
+        handleFiltersChange({ company: selectedCompany, gender });
       };
 
   return (
@@ -48,7 +52,7 @@ const Options = ({handleFiltersChange}) => {
     </ul>
     
     <ul className='pl-20 pt-36'>
-        Company: <select className="w-28"   >
+        Company: <select className="w-28"  value={selectedCompany} onChange={handleCompanyChange} >
             <option value=""></option>
             <option value="Latz">Latz</option>
             <option value="Devpulse">Devpulse</option>
@@ -67,7 +71,7 @@ const Options = ({handleFiltersChange}) => {
     
     <ul className='pl-20 pt-36'>
         Gender: <select className="w-32" value={selectedGender} onChange={handleGenderChange}>
-            <option value=""></option>
+            <option value="">Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
            

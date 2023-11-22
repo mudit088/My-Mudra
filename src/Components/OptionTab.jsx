@@ -308,10 +308,11 @@ const OptionTab = () => {
     gender: "Male"
   }]
   const [filteredData, setFilteredData] = useState(data);
-
-  const handleFiltersChange = ({  gender }) => {
-    const updatedData = initialData;
-    
+  const handleFiltersChange = ({ company, gender }) => {
+    let updatedData = data;
+    if (company !== '') {
+      updatedData = updatedData.filter(item => item.company === company);
+    }
     if (gender !== '') {
       updatedData = updatedData.filter(item => item.gender === gender);
     }

@@ -8,19 +8,17 @@ import Modal from './Components/Modal';
 import OptionTab from './Components/OptionTab'
 
 
-
-
-
-
 const App = () =>
  {
   return (
-    <div className="bg-blue-50">
+    <div className="bg-green-50">
+      
     <Bar/>
     <Nav/>
     <Box/>
    <OptionTab/>
     <Modal/>
+    
     
     </div>
   );
