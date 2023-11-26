@@ -10,19 +10,22 @@ const Options = ({handleFiltersChange}) => {
         const company = e.target.value;
         setSelectedCompany(company);
         handleFiltersChange({ company, gender: selectedGender});
+       
+        
     };
     const handleGenderChange = (e) => {
         const gender = e.target.value;
         setSelectedGender(gender);
         handleFiltersChange({ company: selectedCompany, gender });
       };
+      
 
   return (
     <div>
         <div>
     <p className='float-right pr-96 pt-12  '>
       
-        Assign Multiple Lead to Team Leader: <select className="w-20  " id="Mymudra">
+        Assign Multiple Lead to Team Leader: <select className="w-20 rounded-md border border-gray-400 bg-white px-3.5  " id="">
         <option value=""></option>
         <option value="">A</option>
         <option value="">B</option>
@@ -32,9 +35,10 @@ const Options = ({handleFiltersChange}) => {
         h-8 w-16 mr-72'>Submit</button>
     </p>
     </div>
-    <div className='' style={{ display: 'flex', flexDirection: 'row', }}>
-    <ul className='pt-36 pl-20'>
-        Name: <select className="w-28" id="Mymudra">
+    <div className='flex flex-row sm:flex-no-wrap justify-between m-6' 
+>
+    <ul className='pt-4 sm:pt-36 sm:pl-64'>
+        Name: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 " id="Mymudra">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
@@ -42,8 +46,8 @@ const Options = ({handleFiltersChange}) => {
         </select>
     </ul>
 
-    <ul className='pl-20 pt-36 border-black'>
-        Car: <select className="w-28 border-black" id="Mymudra">
+    <ul className='pt-4 sm:pt-36 sm:pl-20'>
+        Car: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 " id="Mymudra">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
@@ -51,8 +55,8 @@ const Options = ({handleFiltersChange}) => {
         </select>
     </ul>
     
-    <ul className='pl-20 pt-36'>
-        Company: <select className="w-28"  value={selectedCompany} onChange={handleCompanyChange} >
+    <ul className='pt-4 sm:pt-36 sm:pl-20'>
+        Company: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 "  value={selectedCompany} onChange={handleCompanyChange}  >
             <option value=""></option>
             <option value="Latz">Latz</option>
             <option value="Devpulse">Devpulse</option>
@@ -60,8 +64,8 @@ const Options = ({handleFiltersChange}) => {
         </select>
     </ul>
     
-    <ul className='pl-20 pt-36 '>
-        Email: <select className="w-28" id="Mymudra">
+    <ul className='pt-4 sm:pt-36 sm:pl-20 '>
+        Email: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 " id="">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
@@ -69,8 +73,8 @@ const Options = ({handleFiltersChange}) => {
         </select>
     </ul>
     
-    <ul className='pl-20 pt-36'>
-        Gender: <select className="w-32" value={selectedGender} onChange={handleGenderChange}>
+    <ul className='pt-4 sm:pt-36 sm:pl-20  '>
+        Gender: <select className="w-32 rounded-md border border-gray-400 bg-white px-3.5" value={selectedGender} onChange={handleGenderChange}>
             <option value="">Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -78,8 +82,8 @@ const Options = ({handleFiltersChange}) => {
         </select>
     </ul>
     
-    <ul className='pl-20 pt-36'>
-        Partner status: <select className="w-28" id="Mymudra">
+    <ul className='pt-4 sm:pt-36 sm:pl-20 '>
+        Partner status: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5" id="">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
@@ -87,8 +91,7 @@ const Options = ({handleFiltersChange}) => {
 
         </select>
     </ul>
-<button className='bg-teal-500 ml-20 mt-4 rounded-full 
-        h-8 w-16 text-white'>Reset</button>
+<button className='bg-teal-500 ml-2 p-4 pt-2 sm:ml-20 mt-4 rounded-full h-8 w-16 sm:w-auto text-white p-4'>Reset</button>
 
         </div>
        

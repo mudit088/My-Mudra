@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 
 
 const Filters = ({info}) => {
+  
  
   const [currentPage, setCurrentPage] = useState(1);
+  
   const recordsPerPage = 10;
 
  
 
   const lastIndexOfCurrentPage = currentPage * recordsPerPage;
   const firstIndexOfCurrentPage = lastIndexOfCurrentPage - recordsPerPage;
+
   const currentRecords = info.slice(
     firstIndexOfCurrentPage,
     lastIndexOfCurrentPage
@@ -17,6 +20,7 @@ const Filters = ({info}) => {
 
   const totalPageCount = Math.ceil(info.length / recordsPerPage);
   const pageNumbers = [...Array(totalPageCount).keys()].map((num) => num + 1);
+
 
   const previousPage = () => {
     if (currentPage > 1) {
@@ -33,9 +37,11 @@ const Filters = ({info}) => {
       setCurrentPage(currentPage + 1);
     }
   };
+  
+
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto p- sm : m-0">
       
       <table className="min-w-full bg-white border border-gray-300">
         <thead>
