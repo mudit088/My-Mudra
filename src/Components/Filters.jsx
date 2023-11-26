@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 
 
-const Filters = ({info}) => {
-  
+const Filters = ({ info, currentPage, setCurrentPage, recordsPerPage }) => {
  
-  const [currentPage, setCurrentPage] = useState(1);
-  
-  const recordsPerPage = 10;
 
+ 
  
 
   const lastIndexOfCurrentPage = currentPage * recordsPerPage;
@@ -20,7 +17,6 @@ const Filters = ({info}) => {
 
   const totalPageCount = Math.ceil(info.length / recordsPerPage);
   const pageNumbers = [...Array(totalPageCount).keys()].map((num) => num + 1);
-
 
   const previousPage = () => {
     if (currentPage > 1) {
@@ -37,7 +33,6 @@ const Filters = ({info}) => {
       setCurrentPage(currentPage + 1);
     }
   };
-  
 
 
   return (

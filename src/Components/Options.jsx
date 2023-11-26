@@ -1,26 +1,58 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
+import Filters from './Filters'
 
 
-const Options = ({handleFiltersChange}) => {
+
+
+const Options = ({array}) => {
+    
     const [selectedCompany, setSelectedCompany] = useState('');
-    const [selectedGender, setSelectedGender] = useState('');
+  const [selectedGender, setSelectedGender] = useState('');
+  const [filteredData, setFilteredData] = useState(array);
+  const [currentPagee, setCurrentPage] = useState(1);
+  const recordsPerPage = 10;
+
+    const handleFiltersChange = () => {
+      let updatedData = array;
+      if (selectedCompany !== '') {
+        updatedData = updatedData.filter(item => item.company === selectedCompany);
+      }
+      if (selectedGender !== '') {
+        updatedData = updatedData.filter(item => item.gender === selectedGender);
+      }
+      setFilteredData(updatedData);
+      setCurrentPage(1);
+    };
+    
+    
+
+    useEffect(() => {
+        // This function runs when there are changes in selectedCompany or selectedGender
+        handleFiltersChange(); // Triggers the filtering logic
+      
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [selectedCompany, selectedGender]);
 
     const handleCompanyChange = (e) => {
         const company = e.target.value;
         setSelectedCompany(company);
         handleFiltersChange({ company, gender: selectedGender});
-       
+        
         
     };
     const handleGenderChange = (e) => {
         const gender = e.target.value;
         setSelectedGender(gender);
         handleFiltersChange({ company: selectedCompany, gender });
+        
       };
-      
+
+
+     
 
   return (
+    
     <div>
         <div>
     <p className='float-right pr-96 pt-12  '>
@@ -56,7 +88,7 @@ const Options = ({handleFiltersChange}) => {
     </ul>
     
     <ul className='pt-4 sm:pt-36 sm:pl-20'>
-        Company: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 "  value={selectedCompany} onChange={handleCompanyChange}  >
+        Company: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 "  value={selectedCompany} onChange={handleCompanyChange} >
             <option value=""></option>
             <option value="Latz">Latz</option>
             <option value="Devpulse">Devpulse</option>
@@ -94,8 +126,9 @@ const Options = ({handleFiltersChange}) => {
 <button className='bg-teal-500 ml-2 p-4 pt-2 sm:ml-20 mt-4 rounded-full h-8 w-16 sm:w-auto text-white p-4'>Reset</button>
 
         </div>
-       
+        <Filters  info={filteredData} currentPage={currentPagee} setCurrentPage={setCurrentPage} recordsPerPage={recordsPerPage}/>
         </div>
+        
         
         
   )

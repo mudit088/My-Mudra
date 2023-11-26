@@ -1,6 +1,6 @@
 import React from 'react'
 import Options from './Options'
-import Filters from './Filters'
+
 import { useState } from 'react'
 
 
@@ -308,7 +308,6 @@ const OptionTab = () => {
     gender: "Male"
   }]
   const [filteredData, setFilteredData] = useState(data);
-
   const handleFiltersChange = ({ company, gender }) => {
     let updatedData = data;
     if (company !== '') {
@@ -319,14 +318,14 @@ const OptionTab = () => {
       
     }
     setFilteredData(updatedData);
-    
   };
   
+ 
 
   return (
 <div>
-<Options handleFiltersChange={handleFiltersChange} />
-<Filters info={filteredData} />
+<Options handleFiltersChange={handleFiltersChange}  info={filteredData} array={data}/>
+
 </div>
   )
 }
