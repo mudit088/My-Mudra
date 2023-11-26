@@ -5,9 +5,8 @@ const Login = () => {
     
   return (
     <section className="">
-    <div className='bg-green-50'>
-      <img src="LOGO.png" className="h-12 m-3 bg-green-50 " />
-      </div>
+    
+     
     <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 bg-green-50">
    
       <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
