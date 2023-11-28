@@ -28,10 +28,9 @@ const Options = ({array}) => {
     
 
     useEffect(() => {
-        // This function runs when there are changes in selectedCompany or selectedGender
-        handleFiltersChange(); // Triggers the filtering logic
       
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        handleFiltersChange();
+      
       }, [selectedCompany, selectedGender]);
 
     const handleCompanyChange = (e) => {
@@ -55,7 +54,7 @@ const Options = ({array}) => {
     
     <div>
         <div>
-    <p className='float-right pr-96 pt-12  '>
+    <p className='sm:float-right sm:pr-96 sm:pt-12  '>
       
         Assign Multiple Lead to Team Leader: <select className="w-20 rounded-md border border-gray-400 bg-white px-3.5  " id="">
         <option value=""></option>

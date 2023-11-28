@@ -16,7 +16,7 @@ import Crm from './Components/Crm.jsx'
         element : <Login/>,
       },
       {
-        path : 'Crm',
+        path : '',
         element : <Crm/>,
       },
     

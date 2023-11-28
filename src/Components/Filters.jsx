@@ -36,8 +36,8 @@ const Filters = ({ info, currentPage, setCurrentPage, recordsPerPage }) => {
 
 
   return (
-    <div className="container mx-auto p- sm : m-0">
-      
+    <div className="container mx-auto p-4 sm : m-0">
+       <div className="overflow-x-auto">
       <table className="min-w-full bg-white border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
@@ -61,8 +61,8 @@ const Filters = ({ info, currentPage, setCurrentPage, recordsPerPage }) => {
           ))}
         </tbody>
       </table>
-      <nav className="mt-4">
-        <ul className="flex list-none justify-center">
+      <nav className="mt-4 flex justify-center">
+        <ul className="flex list-none ">
           <li className="mr-2">
             <button
               className="bg-teal-500 text-white px-4 py-2 rounded disabled:opacity-50"
@@ -95,6 +95,7 @@ const Filters = ({ info, currentPage, setCurrentPage, recordsPerPage }) => {
           </li>
         </ul>
       </nav>
+      </div>
     </div>
   );
 };
