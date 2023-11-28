@@ -18,32 +18,32 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="/rejection-manager" className="flex items-center p-1  pr-12">
+            <a href="/rejection-manager" className="flex items-center p-1  pr-14">
               Rejection Manager
             </a>
           </li>
           <li>
-            <a href="/loan-book" className="flex items-center p-1  pr-12">
+            <a href="/loan-book" className="flex items-center p-1  pr-14">
               Loan Book
             </a>
           </li>
           <li>
-            <a href="/login-book" className="flex items-center p-1  pr-12">
+            <a href="/login-book" className="flex items-center p-1  pr-14">
               Login Book
             </a>
           </li>
           <li>
-            <a href="/dashboard" className="flex items-center p-1  pr-12">
+            <a href="/dashboard" className="flex items-center p-1  pr-14">
               Dashboard
             </a>
           </li>
           <li>
-            <a href="/post-management" className="flex items-center p-1  pr-12">
+            <a href="/post-management" className="flex items-center p-1  pr-14">
               Post Management
             </a>
           </li>
           <li>
-            <a href="/masters" className="flex items-center p-1  pr-12">
+            <a href="/masters" className="flex items-center p-1  pr-14">
               Masters
             </a>
           </li>
