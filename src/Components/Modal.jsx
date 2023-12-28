@@ -9,7 +9,7 @@ const Modal = () => {
 
   return (
     <>
-      <button onClick={toggleModal} className=' ml-96 flex items-center justify-center bg-teal-500 p-2 rounded-lg '>Open</button>
+      <button onClick={toggleModal} className=' ml-96 flex items-center justify-center bg-teal-500 p-2 rounded-lg m-4 '>Open</button>
       {modal && (
         <div className='fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50'>
           <div className=' bg-teal-50 p-24 rounded-lg rounded-lg '>
