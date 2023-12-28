@@ -4,7 +4,7 @@ import {Link,NavLink}from 'react-router-dom';
 const Nav = () => {
   return (
     <>
-    <nav className="bg-teal-500 text-white p-4 flex items-center justify-between m-4">
+    <nav className="bg-gradient-to-r from-cyan-500 to-green-800 text-white p-4 flex items-center justify-between m-4">
       <div className=" pl-20 text-18px">
         <ul className="space-x-4  sm:space-x-8 flex flex-col justify-center items-center sm:flex-row    ">
           <li>
@@ -23,7 +23,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="/loan-book" className="flex items-center p-1  pr-16">
+            <a href="/loan-book" className="flex items-center p-1  ">
               Loan Book
             </a>
           </li>
