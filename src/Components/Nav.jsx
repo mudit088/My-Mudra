@@ -23,7 +23,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="/loan-book" className="flex items-center p-1  ">
+            <a href="/loan-book" className="flex items-center p-1 pr-16 ">
               Loan Book
             </a>
           </li>
