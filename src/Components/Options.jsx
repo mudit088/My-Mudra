@@ -54,7 +54,7 @@ const Options = ({array}) => {
     
     <div>
         <div>
-    <p className='sm:float-right sm:pr-96 sm:pt-12  '>
+    {/* <p className='sm:float-right sm:pr-96 sm:pt-12  '>
       
         Assign Multiple Lead to Team Leader: <select className="w-20 rounded-md border border-gray-400 bg-white px-3.5  " id="">
         <option value=""></option>
@@ -64,11 +64,11 @@ const Options = ({array}) => {
     </select>
     <button className='ml-4 bg-teal-500 text-white rounded-full 
         h-8 w-16 mr-72'>Submit</button>
-    </p>
+    </p> */}
     </div>
     <div className='flex flex-row sm:flex-no-wrap justify-between m-6' 
 >
-    <ul className='pt-4 sm:pt-36 sm:pl-64'>
+    {/* <ul className='pt-4 sm:pt-36 sm:pl-64'>
         Name: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 " id="Mymudra">
             <option value=""></option>
             <option value="">A</option>
@@ -85,7 +85,7 @@ const Options = ({array}) => {
             <option value="t">C</option>
         </select>
     </ul>
-    
+     */}
     <ul className='pt-4 sm:pt-36 sm:pl-20'>
         Company: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 "  value={selectedCompany} onChange={handleCompanyChange} >
             <option value=""></option>
@@ -95,14 +95,14 @@ const Options = ({array}) => {
         </select>
     </ul>
     
-    <ul className='pt-4 sm:pt-36 sm:pl-20 '>
+    {/* <ul className='pt-4 sm:pt-36 sm:pl-20 '>
         Email: <select className="w-28 rounded-md border border-gray-400 bg-white px-3.5 " id="">
             <option value=""></option>
             <option value="">A</option>
             <option value="">B</option>
             <option value="t">C</option>
         </select>
-    </ul>
+    </ul> */}
     
     <ul className='pt-4 sm:pt-36 sm:pl-20  '>
         Gender: <select className="w-32 rounded-md border border-gray-400 bg-white px-3.5" value={selectedGender} onChange={handleGenderChange}>
@@ -122,7 +122,7 @@ const Options = ({array}) => {
 
         </select>
     </ul>
-<button className='bg-teal-500 ml-2 p-4 pt-2 sm:ml-20 mt-4 rounded-full h-8 w-16 sm:w-auto text-white p-4'>Reset</button>
+
 
         </div>
         <Filters  info={filteredData} currentPage={currentPagee} setCurrentPage={setCurrentPage} recordsPerPage={recordsPerPage}/>
