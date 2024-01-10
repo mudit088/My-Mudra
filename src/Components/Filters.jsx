@@ -36,8 +36,8 @@ const Filters = ({ info, currentPage, setCurrentPage, recordsPerPage }) => {
 
 
   return (
-    <div className="container mx-auto p-4 sm : m-0">
-       <div className="overflow-x-auto">
+    <div className=" mx-auto p-4 sm : m-0">
+       <div className="">
       <table className="min-w-full bg-white border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
